@@ -14,10 +14,10 @@ model Feedback {
   id           String       @id @default(uuid())
   createdAt    DateTime     @default(now())
   updatedAt    DateTime     @updatedAt
-  feedbackType FeedbackType
+  feedbackType FeedbackType @default(FEEDBACK)
   message      String
   email        String
-  name         String
+  name         String?
 }
 
 enum FeedbackType {
